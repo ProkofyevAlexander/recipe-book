@@ -7,9 +7,11 @@ import { Recipe } from '../recipe';
     templateUrl: './recipe-list.component.html'
 })
 export class RecipeListComponent {
-    recipes: Recipe[];
+    recipes: Recipe[] = [
+        new Recipe('Schnitzel', 'Very tasty', 'http://amam.ru/recepts_img/406/shnitsel_iz_tre-shag_12_amam.ru.jpg', []),
+        new Recipe('Summer Salad', 'Okayish', 'http://www.jlady.ru/wp-content/uploads/2010/06/salat-letnij-1.jpg', [])
+    ];
     @Output() recipeSelected = new EventEmitter<Recipe>();
-    recipe = new Recipe('Dummy', 'Dummy', 'https://www.beaulieu.co.uk/wp/wp-content/uploads/2016/02/Crash-Test-Dummy-11.jpg');
 
     onSelected(recipe: Recipe) {
         this.recipeSelected.emit(recipe);
