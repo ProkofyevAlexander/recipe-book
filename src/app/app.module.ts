@@ -6,23 +6,27 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
 import { DropdownDirective } from './dropdown.directive';
-import { RECIPE_COMPONENTS } from './recipes';
+import { RECIPES_COMPONENTS } from './recipes';
 import { SHOPPING_LIST_COMPONENTS, SHOPPING_LIST_SERVICES } from './shopping-list';
+import { routing } from './app.routing';
 
 @NgModule({
     declarations: [
         AppComponent,
         HeaderComponent,
-        RECIPE_COMPONENTS,
+        RECIPES_COMPONENTS,
         SHOPPING_LIST_COMPONENTS,
         DropdownDirective
     ],
     imports: [
         BrowserModule,
         FormsModule,
-        HttpModule
+        HttpModule,
+        routing
     ],
-    providers: [SHOPPING_LIST_SERVICES],
+    providers: [
+        SHOPPING_LIST_SERVICES
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
