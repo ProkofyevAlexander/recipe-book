@@ -13,8 +13,17 @@ export class ShoppingListComponent implements OnInit {
     }
 
     items: Ingredient[] = [];
+    selectedItem: Ingredient = null;
 
     ngOnInit() {
         this.items = this.shoppingListService.getItems();
+    }
+
+    onSelectItem(item: Ingredient) {
+        this.selectedItem = item;
+    }
+
+    onCleared() {
+        this.selectedItem = null;
     }
 }
