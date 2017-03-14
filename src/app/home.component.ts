@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-home',
+    selector: 'rb-home',
     template: `
         <h1>Hello to the Recipe Book!</h1>
     `

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './shared/header.component';
+import { HEADER_COMPONENTS } from './header';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { HomeComponent } from './home.component';
 import { routing } from './app.routing';
@@ -13,7 +13,7 @@ import { ShoppingListModule, SHOPPING_LIST_SERVICES } from './shopping-list';
 @NgModule({
     declarations: [
         AppComponent,
-        HeaderComponent,
+        HEADER_COMPONENTS,
         DropdownDirective,
         HomeComponent
     ],
